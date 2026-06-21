@@ -1,7 +1,7 @@
 import styles from './PricingCard.module.css'
 
 export default function PricingCard({ plan }) {
-  const { name, price, period, description, color, badge, features, cta, highlighted } = plan
+  const { name, price, renewal, period, description, color, badge, features, cta, highlighted } = plan
 
   return (
     <div className={`${styles.card} ${highlighted ? styles.highlighted : ''}`}>
@@ -22,10 +22,15 @@ export default function PricingCard({ plan }) {
         ) : (
           <>
             <span className={styles.currency}>$</span>
-            <span className={styles.amount}>{price}</span>
+            <span className={styles.amount}>{price.toLocaleString()}</span>
           </>
         )}
       </div>
+      {renewal != null && (
+        <div className={styles.renewalBadge} style={{ color }}>
+          Renewal: ${renewal.toLocaleString()} / year
+        </div>
+      )}
       {period === 'lifetime' && (
         <div className={styles.lifetimeBadge} style={{ color, borderColor: color }}>
           ♾ One-time payment · Lifetime access
@@ -46,12 +51,13 @@ export default function PricingCard({ plan }) {
         ))}
       </ul>
 
-      <button
+      <a
+        href="#contact"
         className={`${styles.cta} ${highlighted ? styles.ctaFilled : styles.ctaOutline}`}
         style={highlighted ? { background: color, borderColor: color } : { borderColor: color, color }}
       >
         {cta}
-      </button>
+      </a>
     </div>
   )
 }

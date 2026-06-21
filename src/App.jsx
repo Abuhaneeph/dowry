@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import PricingCard from './components/PricingCard'
 import FAQ from './components/FAQ'
-import { excelPlans, smsPlans } from './data/pricing'
+import { excelPlans, smsPlans, verificationPlans } from './data/pricing'
 import styles from './App.module.css'
 
 const APIS = [
@@ -17,6 +17,20 @@ const APIS = [
     gradient: 'linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%)',
     plans: excelPlans,
     tagline: 'Read, write & convert spreadsheets at scale — with one API call.',
+  },
+  {
+    key: 'verification',
+    label: 'Verification API',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+        <circle cx="12" cy="8" r="4" fill="#10b981" />
+        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M15 14l2 2 4-4" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    gradient: 'linear-gradient(135deg, #059669 0%, #0d9488 50%, #0891b2 100%)',
+    plans: verificationPlans,
+    tagline: 'Verify NIN & BVN identities in real time — fast, secure, and compliant.',
   },
   {
     key: 'sms',
@@ -54,7 +68,7 @@ export default function App() {
           <div className={styles.navLinks}>
             <a href="#" className={styles.navLink}>Docs</a>
             <a href="#" className={styles.navLink}>Blog</a>
-            <a href="#" className={styles.navLink}>Contact</a>
+            <a href="#contact" className={styles.navLink}>Contact</a>
             <a href="#" className={styles.navCta}>Sign in</a>
           </div>
         </div>
@@ -120,6 +134,26 @@ export default function App() {
 
       {/* FAQ */}
       <FAQ />
+
+      {/* Contact section */}
+      <section id="contact" className={styles.contact}>
+        <div className={styles.contactInner}>
+          <div className={styles.contactIcon}>
+            <svg viewBox="0 0 40 40" fill="none" width="40" height="40">
+              <rect width="40" height="40" rx="12" fill="#f0fdf4" />
+              <path d="M10 14a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V14z" stroke="#059669" strokeWidth="1.8" />
+              <path d="M10 14l10 9 10-9" stroke="#059669" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <h2 className={styles.contactTitle}>Get in touch</h2>
+          <p className={styles.contactSub}>
+            Ready to purchase a plan or have questions? Send us an email and our team will get back to you within 24 hours.
+          </p>
+          <a href="mailto:info@nexora.app" className={styles.contactEmail}>
+            info@nexora.app
+          </a>
+        </div>
+      </section>
 
       {/* CTA banner */}
       <section className={styles.ctaBanner} style={{ background: active.gradient }}>

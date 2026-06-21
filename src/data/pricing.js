@@ -58,6 +58,65 @@ export const excelPlans = [
   },
 ]
 
+export const verificationPlans = [
+  {
+    name: 'Pro',
+    price: 6000,
+    renewal: 3000,
+    period: 'lifetime',
+    description: 'Instant NIN & BVN verification for production apps. Pay once, use forever.',
+    color: '#6366f1',
+    badge: 'Most Popular',
+    features: [
+      'NIN (National ID) verification',
+      'BVN (Bank Verification) lookup',
+      'Real-time identity match scoring',
+      'Webhook & callback support',
+      'Priority email support',
+      'All future updates included',
+    ],
+    cta: 'Get Lifetime Access',
+    highlighted: true,
+  },
+  {
+    name: 'Business',
+    price: 9000,
+    period: 'lifetime',
+    description: 'Built for high-volume identity checks with advanced compliance tools.',
+    color: '#f59e0b',
+    badge: 'Best Value',
+    features: [
+      'All Pro features',
+      'Bulk NIN & BVN batch verification',
+      'Facial liveness check add-on',
+      'Advanced fraud scoring',
+      'Multi-user team access (up to 10 seats)',
+      'Dedicated Slack support channel',
+      'All future updates included',
+    ],
+    cta: 'Get Business Access',
+    highlighted: false,
+  },
+  {
+    name: 'Enterprise',
+    price: null,
+    period: null,
+    description: 'Custom volume, SLA, and dedicated compliance infrastructure.',
+    color: '#0ea5e9',
+    badge: null,
+    features: [
+      'All Business features',
+      'Custom KYC workflow builder',
+      'White-label integration',
+      'SSO & full audit logs',
+      'Dedicated account manager',
+      '99.99% uptime SLA',
+    ],
+    cta: 'Contact Sales',
+    highlighted: false,
+  },
+]
+
 export const smsPlans = [
   {
     name: 'Pro',

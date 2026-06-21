@@ -211,6 +211,62 @@
   color: #374151;
 }
 
+/* ── Contact ── */
+.contact {
+  padding: 64px 24px;
+  scroll-margin-top: 60px;
+}
+
+.contactInner {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.contactIcon {
+  margin-bottom: 4px;
+}
+
+.contactTitle {
+  font-size: 28px;
+  font-weight: 900;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+.contactSub {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+.contactEmail {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #059669;
+  text-decoration: none;
+  padding: 12px 28px;
+  border: 2px solid #059669;
+  border-radius: 12px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.contactEmail:hover {
+  background: #059669;
+  color: #fff;
+}
+
 /* ── CTA Banner ── */
 .ctaBanner {
   text-align: center;
